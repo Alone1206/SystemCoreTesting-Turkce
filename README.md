@@ -66,28 +66,27 @@ Her iki güç girişini (Köprü (4 pinli motioncore soketi) + Weidmuller) aynı
 
 ### Güncelleme Modu - Flash Modu
 
-USB-C portun, cihaza güç verilmeden önce bağlanırsa, Systemcore flaş modunda girecektir.
+USB-C portundan pc'ye kablo, Systemcore'a güç verilmeden önce bağlanırsa, Systemcore flaş modunda girecektir.
 
 ### İşletim Sistemi Güncellemelerini Cihaza Yazma (Flashlama)
 
-Alpha sürümü cihazlar 157 kodlu işletim sistemi sürümü yüklü gelir. Eğer yeni başladıysanız bu adımı atlayıp doğrudan programlamaya geçebilirsiniz
+Alpha sürümü Systemcorelar 157 kodlu işletim sistemi sürümü yüklü gelir. Eğer yeni başladıysanız bu adımı atlayıp doğrudan programlamaya geçebilirsiniz
 
-[Systemcore Güncelleme -İşletim Sistemini Cihaza Yazma- Eğitim Videosu (60s)](https://player.vimeo.com/video/1095423117)
+[Systemcore Güncelleme -İşletim Sistemini Systemcore'a Yazma- Eğitim Videosu (60s)](https://player.vimeo.com/video/1095423117)
 <details>
-<summary>İşletim Sistemi Güncellemelerini Cihaza Yazma (Windows)</summary>
+<summary>İşletim Sistemi Güncellemelerini Systemcore'a Yazma (Windows)</summary>
 
-1. Download the latest release from the [systemcore-os-public repository](https://github.com/LimelightVision/systemcore-os-public)
-2. Make sure the new [Limelight Hardware Manager 2.0.1](https://downloads.limelightvision.io/software/LimelightHardwareManagerSetup2_0_1.exe) is installed
-3. Open Limelight Hardware Manager
-3. Navigate to the Flash OS Tab
-4. Boot Systemcore into Flash Mode (see 'power' section above). You should see activity in the log window. If you don't see anything, click the 'reinstall drivers' button at .
-5. Select an OS .zip or .img to flash. Wait for extraction to complete.
-6. Refresh drives and select the one marked as Limelight/Systemcore. 
-7. Click the “Flash” Button after it starts flashing.
-8. Once complete, remove USB and power from Systemcore
+1. En son sürümü indirin [systemcore-os-public repository](https://github.com/LimelightVision/systemcore-os-public)
+2. Bilgisayarınızda yeni [Limelight Hardware Manager 2.0.1 - Limelight Donanım Yöneticisi 2.0.1](https://downloads.limelightvision.io/software/LimelightHardwareManagerSetup2_0_1.exe)'nin yüklü olduğundan emin olun.
+3. Limelight Donanım Yöneticisini (Limelight Hardware Manager) açın.
+3. Flash OS Sekmesini açın.
+4. Systemcore'u flash moduna sokun (yukarıdaki 'Güncelleme Modu' bölümüne bakın). Log penceresinde yeni satırlar oluşması lazım. Olmadıysa, 'reinstall drivers' (sürücüleri yeniden yükle) düğmesine tıklayın.
+5. Flaşlamak için bir işletim sistemi .zip veya .img dosyası seçin. Dosya çıkarma işleminin tamamlanmasını bekleyin.
+6. Sürücüleri yenileye basın  ve Limelight/Systemcore yazanı seçin. 
+7. Yanıp sönmeye başladıktan sonra “Flash” butonuna tıklayın.
+8. Tamamlandığında, Systemcore'dan USB-C'yi çıkarın ve gücünü kesin.
 
-
->**Full System Images will take several minutes to flash. Systemcore will soon support fast OTA updates.**
+>**Tam işletim ssitemi dosyalarının flaşlanması (cihaza yazılması) birkaç dakika sürecektir. Systemcore yakında hızlı OTA güncellemelerini destekleyecektir.**
 
 </details>
 
