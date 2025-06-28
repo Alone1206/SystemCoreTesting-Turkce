@@ -1,74 +1,80 @@
-# SystemCoreTesting
-Repository for Alpha and Beta testing of Systemcore and Motioncore devices
+# SystemCore Test
+## BU DOKÜMAN ORİJİNİAL DOSYADAN TÜRKÇEYE ÇEVRİLMİŞTİR. GÜNCEL OLMAYABİLİR. LÜTFEN EN GÜNCEL BİLGİ İÇİN ANA REPO'YA BAKINIZ.
+Bu belgedeki çeviri revizyonlarını ---  adresinde görebilirsiniz.
 
-Note that all updated documentation for 2027 WPILib changes, new features, etc. can be found on the '2027' version of the WPILib Docs site: https://docs.wpilib.org/en/2027/.
+Systemcore ve Motioncore cihazlarının Alfa ve Beta testleri için oluşturulumuş bir repodur.
 
->**Software posted here is Alpha software for the 2027 season and is not compatible with Control Hub or roboRIO**
+
+2027 WPILib değişiklikleri, yeni özellikler vb. için tüm güncel belgeleri WPILib Docs sitesinin '2027' sürümünde bulabilirsiniz: https://docs.wpilib.org/en/2027/.
+
+
+>**Burada yayınlanan dosya ve kodlar, 2027 sezonu için Alpha sürümüdür, Control Hub ve roboRIO ile uyumlu değildir**
 
 ![SystemcoreTopHousing](https://ik.imagekit.io/llimi/controlsystem/tophousingcrop)
 
-[Systemcore Specification PDF](https://downloads.limelightvision.io/documents/systemcore_specifications_june15_2025_alpha.pdf)
+[Systemcore Özellikler PDF - İngilizce](https://downloads.limelightvision.io/documents/systemcore_specifications_june15_2025_alpha.pdf)
 
->**Alpha units do not have port labels**
+>**Alfa sürümü cihazların soketlerini belirten etiketleri yoktur**
 ![SystemcoreUnboxing](https://ik.imagekit.io/llimi/controlsystem/scunboxing.png)
 
-## Beta Software Directory
+## Beta Yazılımlar
 
-### Tooling
+### Araçlar
 
-[2027 WPILib Installer]( https://packages.wpilib.workers.dev/installer/v2027.0.0-alpha-1/)
+[2027 WPILib Yükleyici]( https://packages.wpilib.workers.dev/installer/v2027.0.0-alpha-1/)
 
-[Limelight Hardware Manager 2.0.1](https://downloads.limelightvision.io/software/LimelightHardwareManagerSetup2_0_1.exe)
+[Limelight Hardware Manager 2.0.1 - Limelight Donanım Yöneticisi 2.0.1](https://downloads.limelightvision.io/software/LimelightHardwareManagerSetup2_0_1.exe)
 
-[OS Releases, Toolchain, Package Examples, Cross-Compilation Examples](https://github.com/LimelightVision/systemcore-os-public)
+[İşletim Sistemi Sürümleri, Paket Örnekleri, Çapraz Derleme Örnekleri](https://github.com/LimelightVision/systemcore-os-public)
 
-### Vendor Libraries
+### Üretici Kütüphaneleri
 
 * [CTR Electronics Phoenix 6](CTR-Phoenix.md)
 * [REV Robotics](REV.md)
 * [AdvantageKit](AdvantageKit.md)
 
-### Other
+### Diğer
 
 * [AdvantageScope 2027 Alpha](AdvantageScope.md)
 * [Elastic 2027 Alpha](Elastic.md)
 
-## Alpha 1 Goals
+## Alpha 1 Hedefleri
 
-* Maximize 'drive time' with Systemcore, ideally with Swerve Drive FRC Robots.
-* Gather feedback on hardware reliability, ease-of-use, connectors, and more.
-* Eliminate as many points of confusion and frustration as possible.
+*'Sürüş süresini' Systemcore ile, özellikle Swerve Drive FRC Robotları kullanarak arttırmak.
+* Donanım güvenilirliği, kullanım kolaylığı, konektörler ve daha fazlası hakkında geri bildirim sağlamak.
+* Mümkün olduğunca çok sayıda kafa karışıklığı ve hayal kırıklığı yaratabilecek noktayı ortadan kaldırmak.
 
-## Systemcore Quick Start
+## Systemcore Hızlı Başlangıç
 
 |  |  |
 |---------|-------|
-| Built-in Wi-Fi Access Point SSID | SYSTEMCORE |
-| Built-in Wi-Fi Access Point Password | PASSWORD |
-| Systemcore Wi-Fi Access Point IP | 172.30.0.1 |
+| Dahili Wi-Fi Erişim Noktası SSID | SYSTEMCORE |
+| Dahili Wi-Fi Erişim Noktası Parolası | PASSWORD |
+| Systemcore Wi-Fi Erişim Noktası IP | 172.30.0.1 |
 | Systemcore USB IP (Windows) | 172.28.0.1 |
 | Systemcore USB IP (Linux, Mac) | 172.29.0.1 |
-| Default User | systemcore |
-| Default Password | systemcore |
-| Default Mount Locations for USB Storage | /U, /V ...|
-| CAN Bus Interface Names| can_s0, can_s1, can_s2, can_s3, can_s4 |
+| Varsayılan Kullanıcıadı | systemcore |
+| Varsayılan Şifre | systemcore |
+| USB Arabirimleri için Varsayılan Bağlama Konumları (Atanan Konumlar) | /U, /V ...|
+| CAN Bus Arayüz Adları | can_s0, can_s1, can_s2, can_s3, can_s4 |
 
-### Powering On
+### Güç Açma
 
-Connect your Systemcore to your robot's power distribution board. We recommend the use of 18AWG wire with white Weidmuller ferrules.
+Systemcore'unuzu robotunuzun güç dağıtım cihazına (PDP, PDH) bağlayın. 18AWG kablo ile beyaz renk Weidmuller ferrül kullanmanızı öneririz.
 
-Do not use both power inputs (Bridge + Weidmuller) simultaneously.
+Her iki güç girişini (Köprü (4 pinli motioncore soketi) + Weidmuller) aynı anda kullanmayın.
 
-### Flash Mode
+### Güncelleme Modu - Flash Modu
 
-If the USBC-port is attached before power is applied, Systemcore will boot into flash mode.
+USB-C portun, cihaza güç verilmeden önce bağlanırsa, Systemcore flaş modunda girecektir.
 
-### Flashing OS Updates
-Alpha Units ship with OS Release 157. Feel free to skip this step and jump right into programming if you're just getting started
+### İşletim Sistemi Güncellemelerini Cihaza Yazma (Flashlama)
 
-[Systemcore Flash Tutorial Video (60s)](https://player.vimeo.com/video/1095423117)
+Alpha sürümü cihazlar 157 kodlu işletim sistemi sürümü yüklü gelir. Eğer yeni başladıysanız bu adımı atlayıp doğrudan programlamaya geçebilirsiniz
+
+[Systemcore Güncelleme -İşletim Sistemini Cihaza Yazma- Eğitim Videosu (60s)](https://player.vimeo.com/video/1095423117)
 <details>
-<summary>Flashing OS Updates (Windows)</summary>
+<summary>İşletim Sistemi Güncellemelerini Cihaza Yazma (Windows)</summary>
 
 1. Download the latest release from the [systemcore-os-public repository](https://github.com/LimelightVision/systemcore-os-public)
 2. Make sure the new [Limelight Hardware Manager 2.0.1](https://downloads.limelightvision.io/software/LimelightHardwareManagerSetup2_0_1.exe) is installed
@@ -86,7 +92,7 @@ Alpha Units ship with OS Release 157. Feel free to skip this step and jump right
 </details>
 
 <details>
-<summary>Flashing OS Updates (Mac)</summary>
+<summary>İşletim Sistemi Güncellemelerini Cihaza Yazma (Mac)</summary>
 
 1. Download [Balena Etcher](https://etcher.balena.io/).
 2. Spin-up RPIBoot:
@@ -105,7 +111,7 @@ Alpha Units ship with OS Release 157. Feel free to skip this step and jump right
 </details>
 
 <details>
-<summary>Flashing OS Updates (Ubuntu/Debian)</summary>
+<summary>İşletim Sistemi Güncellemelerini Cihaza Yazma (Ubuntu/Debian)</summary>
 
 1. Download [Balena Etcher](https://etcher.balena.io/).
 2. Spin-up RPIBoot:
@@ -123,41 +129,41 @@ Alpha Units ship with OS Release 157. Feel free to skip this step and jump right
 
 </details>
 
-> **The new Hardware Manager will soon be cross-platform.**
+> **Yeni Donanım Yöneticisi yakında platformlar arası çalışabilecek.**
 
-> **A browser-based OS update procedure is in development.**
+> **Tarayıcı tabanlı bir işletim sistemi güncelleme özelliği geliştirme aşamasındadır.**
 
-### Accessing the Web Interface and Setting Your Team Number
+### Web Arayüzüne Erişim ve Takım Numaranızı Ayarlama
 
-1. Boot Systemcore normally.
-2. Connect via USB, Ethernet, or Wi-Fi
-3. Navigate to http://robot.local in a web browser. 
-4. Configure your team number in the configuration tab, and click the red "Change Team Number" Button.
+1. Systemcore'u normal şekilde başlatın.
+2. USB, Ethernet veya Wi-Fi üzerinden bağlanın
+3. Bir web tarayıcınızda http://robot.local adresine gidin.
+4. Yapılandırma sekmesinde takım numaranızı ayarlayın ve kırmızı "Change Team Number" (Türkçesi Takım Numarasını Değiştir) butonuna tıklayın.
 
 ![](https://ik.imagekit.io/llimi/controlsystem/teamnumber.png)
 
-6. Open the NI DriverStation and configure it with a matching team number
-7. The NI DriverStation should establish communications with Systemcore at this point.
+6. NI DriverStation'a da aynı takım numarasını girin
+7. Bu noktad artık NI DriverStation'ın Systemcore ile iletişim kurması gerekir.
 
 ![](https://ik.imagekit.io/llimi/controlsystem/dsconnectivity.png)
 
-### Wi-Fi Configuration
+### Wi-Fi Yapılandırması
 
-Release 157 selects a default Wi-Fi channel. This is causing issues in some environments due to interference. Change the channel configuration to 'auto' and set the frequency band to 5Ghz for better connectivity.
+157 kodlu işletim sistemi sürümü varsayılan bir Wi-Fi kanalı seçer. Bu, parazit (interferans) nedeniyle bazı ortamlarda sorunlara neden olabilir. Daha iyi bir bağlantı için kanal yapılandırmasını 'otomatik' olarak değiştirin ve frekansı 5Ghz olarak ayarlayın.
 
-### Deploying Your First Robot Program to Systemcore
+### İlk Robot Kodunuzu Systemcore'a Yükleme
 
-1. Boot and establish connectivity with your Systemcore.
-2. Ensure WPILIB 2027 has been installed.
-3. Open '2027_alpha1 WPILib VS Code' 
-4. Make a new WPILib project as you normally would, and make sure to set the correct team number during the project creation step.
-5. Deploy the project as you normally would.
-6. The NI DriverStation should reflect the presence of robot code.
+1. Systemcore çalıştırın ve bağlantı kurun.
+2. WPILIB 2027'nin kurulu olduğundan emin olun.
+3. '2027_alpha1 WPILib VS Code'u açın
+4. MNormalde yaptığınız gibi yeni bir WPILib projesi oluşturun ve proje oluşturma adımında takım  numarasını girdiğinizden emin olun.
+5. Projeyi normalde yaptığınız gibi robota yükleyin (Shift + F5).
+6. NI DriverStation robot kodunun yüklldiğini göstermelidir (Robot Code seçeneği yeşile dönmelidir).
 
 ![](https://ik.imagekit.io/llimi/controlsystem/dscode.png)
 
-7. You're now ready enable.
-8. After initial testing with this new, simple, project, you can return to VS Code and open existing robot projects, which should trigger the Importer to create new 2027 projects based on those existing projects. 
+7. Artık robotu etkinleştirmeye (enable) hazırsınız.
+8. Bu yeni projeyle ilk testinizi yaptıktan sonra, VS Code'a geri dönebilir ve mevcut robot kodlarınızı açabilirsiniz. Bu, Importer'ı devreye sokup eski projenizi 2027'ye transfer etmenizi sağlayacak ekranı getirmelidir. (Eski projeyi 2027'sürmüne taşımak ister misiniz şeklinde uyarı çıkıyor.)
 
 ### Exploring On-Robot Telemetry with Elastic and AdvantageScope
 
