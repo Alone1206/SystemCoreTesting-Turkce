@@ -168,34 +168,35 @@ Alpha sürümü Systemcorelar 157 kodlu işletim sistemi sürümü yüklü gelir
 
 [Package Installation Tutorial Video (30s)](https://player.vimeo.com/video/1095497571)
 
-1. Download the Elastic and AdvantageScope IPK packages.
-2. Navigate to the web interface.
-3. Click the "Add Package" card. 
-4. Install one package at a time.
-5. Click the new "Elastic" or "AdvantageScope Lite" launch cards.
-6. Use Elastic and AdvantageScope as you normally would. A quick way to add live telemetry to your robot is the use of the SmartDashboard API (subject to change soon) ```SmartDashboard.putNumber("key",value);```.
+1. Elastic ve AdvantageScope IPK paketlerini indirin.
+2. Web arayüzünü açın.
+3. "Paket Ekle" (Add Package) seçeniğine tıklayın.
+4. Paketleri teker teker kurun.
+5. Yeni belirecek "Elastic" veya "AdvantageScope Lite" başlatma seçennklerine tıklayın.
+6. Elastic ve AdvantageScope'u normalde kullandığınız gibi kullanın. Robotunuza canlı telemetri eklemenin hızlı bir yolu, SmartDashboard API'ını kullanmaktır (bu yöntem yakında değişebilir): ```SmartDashboard.putNumber("key",value);```.
 >**Elastic and AdvantageScope Lite packages will soon be pre-baked into the OS**
 
-### Enabling CANivore Support
+### CANivore Desteğini Etkinleştirme
 
-[Package Installation Tutorial Video (30s)](https://player.vimeo.com/video/1095497571)
+[Paket Kurulumu Videosu (30sn)](https://player.vimeo.com/video/1095497571)
 
-1. [Download the CANivore IPK packages.](https://github.com/wpilibsuite/SystemCoreTesting/blob/main/CTR-Phoenix.md#download)
-2. Navigate to the web interface.
-3. Click the "Add Package" card. 
-4. Install the usb-kernel package, and then install the usb package.
-5. Powercycle your Systemcore.
+1. [CANivore IPK paketlerini indirin..](https://github.com/wpilibsuite/SystemCoreTesting/blob/main/CTR-Phoenix.md#download)
+2. Web arayüzünü açın.
+3. "Paket Ekle" (Add Package) seçeneğine tıklayın.
+4. Önce usb-kernel paketini, ardından usb paketini kurun.
+5. Sytemcore cihazınızın gücünü kesip yeniden vererek yeniden başlatın (powercycle).
 
 
 ### Making Cables
 
-Check the "Mating Connector" Section of the specification sheet and [this github discussion](https://github.com/wpilibsuite/SystemCoreTesting/discussions/11).
+Cihazın teknik özellik dosyasındaki ("specification sheet") "Eşleşen Konnektör" (Mating Connector) bölümünü veya [bu forumu](https://github.com/wpilibsuite/SystemCoreTesting/discussions/11) inceleyebilirisiniz.
 
-### Transitioning from roboRIO
+### RoboRio'dan Systemcore'a Geçereken...
+
 #### I2C
 
-The I2C pinout does not match that of the roboRIO. Cables such as https://www.revrobotics.com/rev-11-1729/?searchid=4554778&search_query=4+wire+i2c will need to be modified - SCL and SDA will need to be swapped. The Systemcore pinout matches the Qwiic / ControlHub pinout.
+I2C pin dizilimi roboRIO'nunkiyle aynı değildir. https://www.revrobotics.com/rev-11-1729/?searchid=4554778&search_query=4+wire+i2c gibi kabloların modifiye edilmesi gerekecektir - SCL ve SDA pinlerinin yerleri değiştirilmelidir. Systemcore pin dizilimi, Qwiic / ControlHub pin dizilimi ile uyumludur.
 
 #### IO
 
-The IO signal pins have a 4.7K pulldown resistor. Limit switches will need to short the SIGNAL pin to the +3.3V pin on Systemcore.
+O sinyal pinlerinde 4.7K'lık bir pulldown (aşağı çeken) direnç bulunur. Limit anahtarlarının ("limit switch"), Systemcore üzerindeki SIGNAL pinini +3.3V pinine kısa devre yapması gerekli.
