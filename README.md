@@ -91,7 +91,7 @@ Alpha sürümü Systemcorelar 157 kodlu işletim sistemi sürümü yüklü gelir
 </details>
 
 <details>
-<summary>İşletim Sistemi Güncellemelerini Cihaza Yazma (Mac)</summary>
+<summary>İşletim Sistemi Güncellemelerini Systemcore'a Yazma (Mac)</summary>
 
 1. Download [Balena Etcher](https://etcher.balena.io/).
 2. Spin-up RPIBoot:
@@ -110,7 +110,7 @@ Alpha sürümü Systemcorelar 157 kodlu işletim sistemi sürümü yüklü gelir
 </details>
 
 <details>
-<summary>İşletim Sistemi Güncellemelerini Cihaza Yazma (Ubuntu/Debian)</summary>
+<summary>İşletim Sistemi Güncellemelerini Systemcore'a Yazma (Ubuntu/Debian)</summary>
 
 1. Download [Balena Etcher](https://etcher.balena.io/).
 2. Spin-up RPIBoot:
@@ -164,7 +164,7 @@ Alpha sürümü Systemcorelar 157 kodlu işletim sistemi sürümü yüklü gelir
 7. Artık robotu etkinleştirmeye (enable) hazırsınız.
 8. Bu yeni projeyle ilk testinizi yaptıktan sonra, VS Code'a geri dönebilir ve mevcut robot kodlarınızı açabilirsiniz. Bu, Importer'ı devreye sokup eski projenizi 2027'ye transfer etmenizi sağlayacak ekranı getirmelidir. (Eski projeyi 2027'sürmüne taşımak ister misiniz şeklinde uyarı çıkıyor.)
 
-### Exploring On-Robot Telemetry with Elastic and AdvantageScope
+###  Robot Telemetrisini Elastic ve AdvantageScope ile İnceleme
 
 [Package Installation Tutorial Video (30s)](https://player.vimeo.com/video/1095497571)
 
@@ -174,7 +174,7 @@ Alpha sürümü Systemcorelar 157 kodlu işletim sistemi sürümü yüklü gelir
 4. Paketleri teker teker kurun.
 5. Yeni belirecek "Elastic" veya "AdvantageScope Lite" başlatma seçennklerine tıklayın.
 6. Elastic ve AdvantageScope'u normalde kullandığınız gibi kullanın. Robotunuza canlı telemetri eklemenin hızlı bir yolu, SmartDashboard API'ını kullanmaktır (bu yöntem yakında değişebilir): ```SmartDashboard.putNumber("key",value);```.
->**Elastic and AdvantageScope Lite packages will soon be pre-baked into the OS**
+>**Elastic ve AdvantageScope Lite paketleri yakında işletim sistemine gömülü olarak gelecektir.**
 
 ### CANivore Desteğini Etkinleştirme
 
@@ -187,7 +187,7 @@ Alpha sürümü Systemcorelar 157 kodlu işletim sistemi sürümü yüklü gelir
 5. Sytemcore cihazınızın gücünü kesip yeniden vererek yeniden başlatın (powercycle).
 
 
-### Making Cables
+### SystemCore Uyumlu Kablolar
 
 Cihazın teknik özellik dosyasındaki ("specification sheet") "Eşleşen Konnektör" (Mating Connector) bölümünü veya [bu forumu](https://github.com/wpilibsuite/SystemCoreTesting/discussions/11) inceleyebilirisiniz.
 
