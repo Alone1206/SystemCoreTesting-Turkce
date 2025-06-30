@@ -32,6 +32,7 @@ Systemcore ve Motioncore cihazlarının Alfa ve Beta testleri için oluşturulum
 * [CTR Electronics Phoenix 6](CTR-Phoenix.md)
 * [REV Robotics](REV.md)
 * [AdvantageKit](AdvantageKit.md)
+* [ChoreoLib](ChoreoLib.md)
 
 ### Diğer
 
@@ -40,8 +41,8 @@ Systemcore ve Motioncore cihazlarının Alfa ve Beta testleri için oluşturulum
 
 ## Alpha 1 Hedefleri
 
-*'Sürüş süresini' Systemcore ile, özellikle Swerve Drive FRC Robotları kullanarak arttırmak.
-* Donanım güvenilirliği, kullanım kolaylığı, konektörler ve daha fazlası hakkında geri bildirim sağlamak.
+*'Robotların -özellikle swerve sürüş sisttemli olanların- olabildiğince çok ve süre boyunca sürülmesini sağlamak.
+* Donanım güveilirliği, kullanım kolaylığı, konektörler ve daha fazlası hakkında geri bildirim sağlamak.
 * Mümkün olduğunca çok sayıda kafa karışıklığı ve hayal kırıklığı yaratabilecek noktayı ortadan kaldırmak.
 
 ## Systemcore Hızlı Başlangıç
@@ -199,4 +200,4 @@ I2C pin dizilimi roboRIO'nunkiyle aynı değildir. https://www.revrobotics.com/r
 
 #### IO
 
-O sinyal pinlerinde 4.7K'lık bir pulldown (aşağı çeken) direnç bulunur. Limit anahtarlarının ("limit switch"), Systemcore üzerindeki SIGNAL pinini +3.3V pinine kısa devre yapması gerekli.
+IO sinyal pinlerinde 4.7K'lık bir pulldown (aşağı çeken) direnç bulunur. Limit anahtarlarının ("limit switch"), Systemcore üzerindeki SIGNAL pinini +3.3V pinine kısa devre yapması gerekli.
