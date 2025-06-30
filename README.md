@@ -41,7 +41,7 @@ Systemcore ve Motioncore cihazlarının Alfa ve Beta testleri için oluşturulum
 
 ## Alpha 1 Hedefleri
 
-*'Robotların -özellikle swerve sürüş sisttemli olanların- olabildiğince çok ve süre boyunca sürülmesini sağlamak.
+*'Robotların -özellikle swerve sürüş sistemli olanların- olabildiğince çok ve uun süre boyunca sürülmesini sağlamak.
 * Donanım güveilirliği, kullanım kolaylığı, konektörler ve daha fazlası hakkında geri bildirim sağlamak.
 * Mümkün olduğunca çok sayıda kafa karışıklığı ve hayal kırıklığı yaratabilecek noktayı ortadan kaldırmak.
 
