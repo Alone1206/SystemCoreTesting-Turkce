@@ -1,8 +1,8 @@
-Likely Changes:
-* Change USB retention screw thread to M3 or M4
-* Use connector for OLED display
+Muhtemel Değişiklikler:
+* USB sabitleme vidası boyunun M3 veya M4 olarak değiştirilmesi.
+* OLED ekran için konnektör kullanılması.
 
 
 
-To explore:
-* Drop Weidmuller power, adopt 2 pin Microfit+ for power, adopt SL for CAN bus.
+Araştırılacak Konular:
+* Weidmuller güç konnektöründen vazgeçip, güç girişi için 2 pinli Microfit+ ve CAN bus için SL serisi konnektörlerin kullanılması.
