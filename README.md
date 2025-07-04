@@ -33,6 +33,7 @@ Systemcore ve Motioncore cihazlarının Alfa ve Beta testleri için oluşturulum
 * [REV Robotics](REV.md)
 * [AdvantageKit](AdvantageKit.md)
 * [ChoreoLib](ChoreoLib.md)
+* [PathPlannerLib](PathPlannerLib.md)
 
 ### Diğer
 
